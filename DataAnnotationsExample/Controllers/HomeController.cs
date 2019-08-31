@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DataAnnotationsExample.Models;
+using DataAnnotationsValidationExample.Models;
 
-namespace DataAnnotationsExample.Contollers
+namespace DataAnnotationsValidationExample.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,6 +16,10 @@ namespace DataAnnotationsExample.Contollers
 
         public IActionResult Details(Person person)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Index", person);
+            }
             return View(person);
         }
     }

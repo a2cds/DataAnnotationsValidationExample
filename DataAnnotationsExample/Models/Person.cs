@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAnnotationsExample.Models
+namespace DataAnnotationsValidationExample.Models
 {
     public class Person
     {
